@@ -1,6 +1,8 @@
 Ajax.js
 ---
 
+Simple encapsulation of Ajax actions.
+
 ## Get it
 
 `<script src="Ajax.js"></script>`
