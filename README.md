@@ -5,7 +5,7 @@ laboratory is the *private* place of Fantasy
 
 ## Lab List
 
-> Ooops, it's empty ><
+* Ajax - simple encapsulation of ajax actions
 
 ## License
 
