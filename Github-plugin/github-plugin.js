@@ -53,6 +53,18 @@ var bindEvent = function() {
 	for(var i = 0; i < ps.length; i++) {
 		switchTab(i);
 	}
+
+	function removeItems() {
+		for(var t = 0; t < si.length; t++) {
+			si[t].classList.remove('current-item');
+		}
+	}
+	
+	if(window.onscroll) {
+		window.onscroll = removeItems();
+	} else {
+		document.onscroll = removeItems();
+	}
 };
 
 // Sort repos default by watchers_count
