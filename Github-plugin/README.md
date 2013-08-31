@@ -7,6 +7,10 @@
                                     |_|            |___/         
 
 ```
+## Demo
+
+View my [blog site](http://blog.shaofantasy.cn).
+
 ## Usage
 
 1. configure your own Github-plugin in `github-plugin.js`:
