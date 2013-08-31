@@ -55,6 +55,14 @@ var bindEvent = function() {
 	}
 };
 
+// Sort repos default by watchers_count
+var Sort = function(data) {
+	return data.sort(function(a, b) {
+		return a.watchers_count > b.watchers_count ? -1 : a.watchers_count == b.watchers_count ? 0 : 1;
+	});
+};
+
+// Main function
 var Main = {
 	getUserInfo: function() {
 		Ajax.ajax({
@@ -74,11 +82,18 @@ var Main = {
 		Ajax.ajax({
 			url: URL + '/repos',
 			callback: function(JSON) {
-				var tempNode;
+				var tempNode, length;
+				Sort(JSON);
 
-				for(var i = 0; i < REPO_NUM; i++) {
+				if(REPO_NUM < JSON.length) {
+					length = REPO_NUM;
+				} else {
+					length = JSON.length;
+				}
+
+				for(var i = 0; i < length; i++) {
 					tempNode = document.createElement('li');
-					tempNode.innerHTML = JSON[i].name;
+					tempNode.innerHTML = '<a href="' + JSON[i].html_url + '">' + JSON[i].name +'</a>';
 
 					$('repos').appendChild(tempNode);
 				}
@@ -89,7 +104,20 @@ var Main = {
 		Ajax.ajax({
 			url: URL + '/followers',
 			callback: function(JSON) {
-				
+				var tempNode, length;
+
+				if(FOLLOWER_NUM < JSON.length) {
+					length = FOLLOWER_NUM;
+				} else {
+					length = JSON.length;
+				}
+
+				for(var i = 0; i < length; i++) {
+					tempNode = document.createElement('li');
+					tempNode.innerHTML = '<a href="' + JSON[i].html_url + '">' + JSON[i].login +'</a>';
+
+					$('followers').appendChild(tempNode);
+				}
 			}
 		});
 	},
@@ -97,7 +125,20 @@ var Main = {
 		Ajax.ajax({
 			url: URL + '/following',
 			callback: function(JSON) {
-				
+				var tempNode, length;
+
+				if(FOLLOWING_NUM < JSON.length) {
+					length = FOLLOWING_NUM;
+				} else {
+					length = JSON.length;
+				}
+
+				for(var i = 0; i < length; i++) {
+					tempNode = document.createElement('li');
+					tempNode.innerHTML = '<a href="' + JSON[i].html_url + '">' + JSON[i].login +'</a>';
+
+					$('followings').appendChild(tempNode);
+				}
 			}
 		});
 	}
