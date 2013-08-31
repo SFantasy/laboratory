@@ -21,7 +21,8 @@ var configuration = {
 ```
 
 2. embed HTML of `<div class="plugin"></div>` into your site;
-3. use the `github-plugin.js` and `github-plugin.css`.
+3. use the [Ajax.js](https://rawgithub.com/SFantasy/laboratory/master/Ajax/ajax.js) which is also my lab repo;
+4. use the [github-plugin.js](https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.js) and [github-plugin.css](https://rawgithub.com/SFantasy/laboratory/master/Github-plugin/github-plugin.css).
 
 ## License
 
