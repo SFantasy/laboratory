@@ -9,6 +9,7 @@ a {
 }
 
 .plugin {
+	font-family: Georgia;
 	position: fixed;
 	right: 10px;
 	top: 0;
