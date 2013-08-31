@@ -9,7 +9,19 @@
 ```
 ## Usage
 
-DEVELOPING...
+1. configure your own Github-plugin in `github-plugin.js`:
+
+```
+var configuration = {
+	"username": 'SFantasy',
+	"repo_num": '5',
+	"follower_num": '5',
+	"following_num": '5'
+};
+```
+
+2. embed HTML of `<div class="plugin"></div>` into your site;
+3. use the `github-plugin.js` and `github-plugin.css`.
 
 ## License
 
