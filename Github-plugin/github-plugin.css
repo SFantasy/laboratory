@@ -1,0 +1,103 @@
+html, body, ul, li, div, h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+li { 
+	list-style: none;
+}
+
+.plugin {
+	position: fixed;
+	right: 10px;
+	top: 0;
+	width: 290px;
+	border-top: 2px solid #f3f3f3
+}
+
+.plugin-switch {
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	font-size: 0;
+	background-color: #f3f3f3;
+	background-image: -o-linear-gradient(#f9f9f9, #f3f3f3);
+	background-image: -moz-linear-gradient(#f9f9f9, #f3f3f3);
+	background-image: -webkit-gradient(#f9f9f9, #f3f3f3);
+	background-image: -webkit-linear-gradient(#f9f9f9, #f3f3f3);
+	background-image: linear-gradient(#f9f9f9, #f3f3f3);
+	background-repeat: repeat-x;
+}
+	.plugin-switch .current-tab {
+		border-bottom: 2px solid #f00;
+	}
+	.plugin-switch li {
+		display: inline-block;
+		font-size: 14px;
+		cursor: pointer;
+		width: 60px;
+		text-align: center;
+	}
+	.plugin-switch li:first-child {
+		font-size: 18px;
+	}
+	.plugin-switch li {
+		padding: 5px 5px 0;
+	}
+	
+	.user,
+	.repos,
+	.followings,
+	.followers {
+		background-color: #f9f9f9;
+		padding: 5px;
+		border: 1px solid #e5e5e5;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+		.user a {
+			text-decoration: none;
+			color: #495961;
+		}
+		.user .user-name,
+		.user .user-avatar {
+			float: left;
+		}
+		.user .user-name {
+			font-size: 18px;
+			margin-top: 30px;
+		}
+		.user .user-avatar .logo {
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+		}
+		.user .user-info {
+			clear: both;
+		}
+
+	.switch-items {
+		position: relative;
+	}
+
+	.switch-items > div,
+	.switch-items > ul {
+		position: absolute;
+		top: 0;
+		display: block;
+		opacity: 0;
+		z-index: -1;
+		-webkit-transition: opacity .8s linear;
+		-moz-transition: opacity .8s linear;
+		-o-transition: opacity .8s linear;
+		transition: opacity .8s linear;
+	}
+
+	.switch-items .current-item {
+		width: 278px;
+		z-index: 9999;
+		opacity: 1;
+		-webkit-transition: opacity .8s linear;
+		-moz-transition: opacity .8s linear;
+		-o-transition: opacity .8s linear;
+		transition: opacity .8s linear;
+	}

@@ -6,23 +6,27 @@
 	</head>
 	<body>
 		<div class="plugin">
-			<ul>
-				<li>Github</li>
-				<li>Repos</li>
-				<li>Follower</li>
-				<li>Following</li>
+			<ul class="plugin-switch" id="pluginSwitch">
+				<li class="current-tab">Github</li>
+				<li>repos</li>
+				<li>follower</li>
+				<li>following</li>
 			</ul>
-			<div class="user">
-				<h2 id="user-name"></h2>
-				<div id="user-avatar">
+			<div class="switch-items" id="switchItems">
+				<div class="user">
+					<a href="">
+						<h2 class="user-name" id="userName"></h2>
+						<div class="user-avatar" id="userAvatar"></div>
+					</a>
+					<div class="user-info">
+						<b>Profile:</b>
+						<div id="userInfo"></div>
+					</div>
 				</div>
-				<table id="user-info">
-					<tbody></tbody>
-				</table>
+				<ul class="repos" id="repos"></ul>
+				<ul class="followers" id="followers"></ul>
+				<ul class="followings" id="followings"></ul>				
 			</div>
-			<div class="repos"></div>
-			<div class="followers"></div>
-			<div class="followings"></div>
 		</div>
 		<script src="https://rawgithub.com/SFantasy/laboratory/master/Ajax/ajax.js"></script>
 		<script src="github-plugin.js"></script>
