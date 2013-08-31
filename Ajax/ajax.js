@@ -13,7 +13,7 @@ var Ajax = {
     ajax: function(options) {
         /* 参数列表 */
         var         type = options.type         || 'GET',
-                datatype = options.datatype     || '',
+                datatype = options.datatype     || 'JSON',
                      url = options.url          || '',
                    sdata = options.sdata        || null,
            beforeRequest = options.beforRequest || function() {},
