@@ -59,11 +59,11 @@ var bindEvent = function() {
 			si[t].classList.remove('current-item');
 		}
 	}
-	
+
 	if(window.onscroll) {
-		window.onscroll = removeItems();
+		window.onscroll = removeItems;
 	} else {
-		document.onscroll = removeItems();
+		document.onscroll = removeItems;
 	}
 };
 
