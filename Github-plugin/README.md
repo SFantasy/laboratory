@@ -9,8 +9,7 @@
 ```
 ## Usage
 
-1. Configure your Github information in `github-plugin.js`
-2. 
+DEVELOPING...
 
 ## License
 
