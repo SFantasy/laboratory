@@ -30,7 +30,11 @@ var Ajax = {
         };
         /* 初始化HTTP请求参数 */
         W.open(type, url, async);
- 
+
+        // 允许跨域
+        // (不能放在上面，会有浏览器兼容问题)
+        W.withCredentials = true;
+
         if(type === 'GET') {
             W.send(null);
         } else {
