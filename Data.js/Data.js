@@ -27,7 +27,7 @@ Data.prototype = {
         }
     },
     setCookie: function(key, value, expires, domain, path) {
-        document.cookie = encodeURLComponent(key) + '=' + encodeURLComponent(value) +
+        document.cookie = encodeURIComponent(key) + '=' + encodeURIComponent(value) +
                             (expires ? '; expires=' + expires.toUTCString() : '') +
                             (domain ? ';domain=' + domain : '') +
                             (path ? '; path=' + path : '');
