@@ -37,4 +37,4 @@ Ajax.ajax({
         // handle data received
     }
 });
-
+```
