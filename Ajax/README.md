@@ -9,7 +9,7 @@ Simple encapsulation of Ajax actions.
 
 ## Usage
 
-* Example
+* GET
 
 ```
 Ajax.ajax({
@@ -22,3 +22,19 @@ Ajax.ajax({
 	}
 });
 ```
+
+* POST
+```
+Ajax.ajax({
+    type: 'POST',
+    datatype: 'JSON',
+    data: {
+        // what you want to post
+    },
+    url: '/ajaxtest',
+    async: 'true',
+    callback: function(JSON) {
+        // handle data received
+    }
+});
+
