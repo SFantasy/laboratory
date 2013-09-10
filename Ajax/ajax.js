@@ -5,9 +5,10 @@ var Ajax = {
      *             type: GET || POST
      *             datatype: JSON as default
      *             url: Interface URL
-     *             sdata:
+     *             data: POST your data
      *             callback: Callback function
      *             async: true || false 
+     *             credentials: allow 'Access-Control-Allow-Origin' or not || false
      *         }
      */
     ajax: function(options) {
@@ -15,7 +16,7 @@ var Ajax = {
         var         type = options.type         || 'GET',
                 datatype = options.datatype     || 'JSON',
                      url = options.url          || '',
-                   sdata = options.sdata        || null,
+                    data = options.data        || null,
            beforeRequest = options.beforRequest || function() {},
                 callback = options.callback     || function() {},
                    fdata = options.fdata        || null,
@@ -39,9 +40,8 @@ var Ajax = {
         if(type === 'GET') {
             W.send(null);
         } else {
-            //W.setRequestHeader('Content-length', sdata.length);
             W.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-            W.send(sdata);
+            W.send(data);
         }
  
         if(async) {
