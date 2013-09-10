@@ -5,7 +5,13 @@ Simple encapsulation of Ajax actions.
 
 ## Get it
 
+* Download and embed it
+
 `<script src="Ajax.js"></script>`
+
+* GitHub CDN
+
+`<script src="http://rawgithub.com/SFantasy/laboratory/master/Ajax/ajax.js"></script>`
 
 ## Usage
 
