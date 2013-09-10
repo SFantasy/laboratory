@@ -24,6 +24,7 @@ Ajax.ajax({
 ```
 
 * POST
+
 ```
 Ajax.ajax({
     type: 'POST',
