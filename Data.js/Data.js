@@ -48,7 +48,15 @@ Data.prototype = {
      *  e.g. 1. 'test=1a2a3a' => updateCookie(test, 1) => 'test=2a3a1a'
      *       2. 'test=1a2a3a' => updateCookie(test, 4) => 'test=1a2a3a4'
      */
-    updateCookie: function(key, value, expires, domain, path, divider, limit) {
+    updateCookie: function(options) {
+        var     key = options.key,
+              value = options.value,
+            expires = options.expires,
+             domain = options.domain,
+               path = options.path,
+            divider = options.divider,
+              limit = options.limit;
+
         var currentCookie = this.getCookie(key),
             cookieArray;
 
