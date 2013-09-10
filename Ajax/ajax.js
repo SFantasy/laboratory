@@ -20,6 +20,7 @@ var Ajax = {
                 callback = options.callback     || function() {},
                    fdata = options.fdata        || null,
                    async = options.async        || true;
+             credentials = options.credentials  || false;
  
         var W = Ajax.createXMLHttpRequest();
  
@@ -31,9 +32,9 @@ var Ajax = {
         /* 初始化HTTP请求参数 */
         W.open(type, url, async);
 
-        // 允许跨域
+        // 根据选项，是否允许跨域
         // (不能放在上面，会有浏览器兼容问题)
-        // W.withCredentials = true;
+        W.withCredentials = credentials;
 
         if(type === 'GET') {
             W.send(null);
