@@ -33,7 +33,7 @@ var Ajax = {
 
         // 允许跨域
         // (不能放在上面，会有浏览器兼容问题)
-        W.withCredentials = true;
+        // W.withCredentials = true;
 
         if(type === 'GET') {
             W.send(null);
