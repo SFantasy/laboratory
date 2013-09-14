@@ -46,13 +46,21 @@ D.setCookie(key, value[, expires] [, domain] [, path])
 > reference: [MDN](https://developer.mozilla.org/en-US/docs/Web/API/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support)
 
 ```
-D.getCookie(key);
+D.getCookie(key)
 ```
 
 * updateCookie
 
 ```
-D.updateCookie(key, value[, expires] [, domain] [, path] [, divider] [, limit])
+D.updateCookie({
+   key: key,
+   value: value [,
+   expires: expires] [,
+   domain: domain] [,
+   path: path] [,
+   divider: divider], [,
+   limit: limit]
+})
 ```
 
 ## License
