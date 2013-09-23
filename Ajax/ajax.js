@@ -62,7 +62,7 @@ var Ajax = {
         } catch(E) {
             try {
                 temp = new ActiveXObject('Microsoft.XMLHTTP');
-            } catch(E) {
+            } catch(F) {
                 temp = new XMLHttpRequest();
             }
         }
@@ -78,8 +78,16 @@ var Ajax = {
  
             ajaxData = type == 'xml' || ajaxData ? req.responseXML : req.responseData;
  
+            if(type == 'HTML') {
+                ajaxData = req.responseText;
+            }
+
+            if(type == 'JavaScript') {
+                ajaxData = eval( req.responseText );
+            }
+
             if(type == 'JSON') {
-                ajaxData = eval("(" + req.responseText +")");
+                ajaxData = eval("(" + req.responseText + ")");
             }
  
             if(req.status != 200) {
