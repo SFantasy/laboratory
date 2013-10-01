@@ -1,7 +1,7 @@
 laboratory
 ==========
 
-laboratory is the *private* place of Fantasy
+Laboratory is the *private* place of [Fantasyshao](https://github.com/SFantasy)
 
 ## Lab List
 
