@@ -50,6 +50,7 @@ a {
 	.repos,
 	.followings,
 	.followers {
+		width: 278px;
 		background-color: #f9f9f9;
 		padding: 5px;
 		border: 1px solid #e5e5e5;
@@ -81,23 +82,12 @@ a {
 	.switch-items > ul {
 		position: absolute;
 		top: 0;
-		display: block;
-		opacity: 0;
-		z-index: -1;
-		-webkit-transition: opacity .8s linear;
-		-moz-transition: opacity .8s linear;
-		-o-transition: opacity .8s linear;
-		transition: opacity .8s linear;
+		display: none;
 	}
 
 	.switch-items .current-item {
 		width: 278px;
-		z-index: 9999;
-		opacity: 1;
-		-webkit-transition: opacity .8s linear;
-		-moz-transition: opacity .8s linear;
-		-o-transition: opacity .8s linear;
-		transition: opacity .8s linear;
+		display: block;
 	}
 
 	.repos li,
