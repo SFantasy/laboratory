@@ -1,0 +1,24 @@
+/* Icons in CSS*/
+
+/* Global */
+html, body, div { margin: 0; padding: 0; }
+header,
+article,
+footer { width: 640px; margin: 0 auto; font-family: Georgia, Garamond, Times, "Times New Roman", serif; }
+footer p { text-align: center; }
+
+/* Single arrow */
+.arrow { position: relative; height: 40px; width: 20px; }
+.arrow.down > span:first-child,
+.arrow.up   > span:last-child { display: block; margin: 0 auto; width: 10px; height: 20px; background: #ff7400; }
+.arrow.down > span:last-child,
+.arrow.up   > span:first-child { border-style: solid; border-width: 10px; font-size: 0; height: 0; width: 0; }
+.arrow.down > span:last-child { position: absolute; bottom: 0; border-color: #ff7400 transparent transparent transparent; }
+.arrow.up > span:first-child { display: block; border-color: transparent transparent #ff7400 transparent; }
+
+/* Two arrows */
+.two-arrow > span { display: block; }
+.two-arrow > span:first-child { border-style: solid; border-width: 10px; width: 0; border-color: transparent transparent #ff7400 transparent; margin-bottom: 3px; }
+.two-arrow > span:last-child { border-style: solid; border-width: 10px; border-color: #ff7400 transparent transparent transparent; font-size: 0; height: 0; width: 0; }
+.two-arrow.up   > span:last-child  { border-color: #908e8e transparent transparent transparent; }
+.two-arrow.down > span:first-child { border-color: transparent transparent #908e8e transparent; }
