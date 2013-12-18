@@ -22,3 +22,9 @@ footer p { text-align: center; }
 .two-arrow > span:last-child { border-style: solid; border-width: 10px; border-color: #ff7400 transparent transparent transparent; font-size: 0; height: 0; width: 0; }
 .two-arrow.up   > span:last-child  { border-color: #908e8e transparent transparent transparent; }
 .two-arrow.down > span:first-child { border-color: transparent transparent #908e8e transparent; }
+
+/* Other icons */
+.magnifier { position: relative; width: 34px; height: 30px; }
+
+.magnifier > span:first-child { display: inline-block; width: 20px; height: 20px; border: 4px solid #ccc; border-radius: 14px; }
+.magnifier > span:last-child  { position: absolute; right: 0; bottom: 0; display: block; width: 10px; border: 2px solid #ccc; border-radius: 2px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
